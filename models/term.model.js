@@ -10,6 +10,14 @@ const termSchema = new Schema(
       type: String,
       required: true,
     },
+    book: {
+      type: String,
+      required: true,
+    },
+    chapter: {
+      type: String,
+      required: true,
+    },
   },
   {
     timestamps: true,

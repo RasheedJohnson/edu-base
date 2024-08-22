@@ -17,9 +17,19 @@ export async function PUT(request, { params }) {
     }
 
     // Grab title and description
-    const { newTerm: term, newDefinition: definition } = await request.json();
+    const {
+      newTerm: term,
+      newDefinition: definition,
+      newBook: book,
+      newChapter: chapter,
+    } = await request.json();
 
-    const termToUpdate = await Term.findByIdAndUpdate(id, { term, definition });
+    const termToUpdate = await Term.findByIdAndUpdate(id, {
+      term,
+      definition,
+      book,
+      chapter,
+    });
     // Check if Term exists to be updated
     if (!termToUpdate) {
       return NextResponse.json(

@@ -7,7 +7,7 @@ import { NextResponse } from "next/server";
 export async function POST(request) {
   try {
     const reqBody = await request.json();
-    const { term, definition } = reqBody;
+    const { term, definition, book, chapter } = reqBody;
 
     await connectToMongoDB();
 
@@ -21,7 +21,7 @@ export async function POST(request) {
     }
 
     // Create new term
-    await Term.create({ term, definition });
+    await Term.create({ term, definition, book, chapter });
 
     // Return status
     return NextResponse.json(

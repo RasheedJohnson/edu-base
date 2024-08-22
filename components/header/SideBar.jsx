@@ -15,7 +15,7 @@ export const SideBar = ({ children }) => {
   };
 
   return (
-    <aside className="h-screen absolute">
+    <aside className={`h-screen fixed`}>
       <nav className="h-full flex flex-col bg-gray-700/50 backdrop-blur-md border-r border-red-200/20 shadow-sm">
         {/* Top Panel */}
         <div className="p-4 pb-2 flex justify-between items-center">
