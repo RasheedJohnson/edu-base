@@ -1,6 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.button-shadow-main {
+  box-shadow: inset 0px 0px 5px lightblue, 0px 0px 5px lightblue;
+}
+.button-shadow-main-hover {
+  box-shadow: inset 0px 0px 5px lightgreen, 0px 0px 20px lightgreen;
+}
+
 /* 
 :root {
   --foreground-rgb: 0, 0, 0;

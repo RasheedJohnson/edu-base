@@ -6,7 +6,10 @@ import { useRouter } from "next/navigation";
 const AddTerm = () => {
   const [term, setTerm] = useState("");
   const [definition, setDefinition] = useState("");
-  const [book, setBook] = useState("");
+  // Temporary fill in book
+  const [book, setBook] = useState(
+    "Developmental Psychology Childhood and Adolescence"
+  );
   const [chapter, setChapter] = useState("");
 
   const router = useRouter();
@@ -20,9 +23,6 @@ const AddTerm = () => {
       return;
     }
 
-    // Create Term
-    const term = { term, definition, book, chapter };
-
     try {
       const res = await fetch("http://localhost:3000/api/terms", {
         method: "POST",
@@ -33,7 +33,7 @@ const AddTerm = () => {
       });
 
       if (res.ok) {
-        router.push("/terminology");
+        router.push("/terms");
       } else {
         throw new Error("Failed to create a Term");
       }
@@ -52,28 +52,28 @@ const AddTerm = () => {
         <input
           onChange={(e) => setTerm(e.target.value)}
           value={term}
-          className="border-[1px] border-green-200/30 rounded-md px-4 py-1 w-[290px]"
+          className="border-[1px] border-green-200/30 rounded-md px-4 py-1 w-[350px]"
           type="text"
           placeholder="Term"
         />
         <textarea
           onChange={(e) => setDefinition(e.target.value)}
           value={definition}
-          className="border-[1px] border-green-200/30 rounded-md px-4 py-1 w-[290px] h-32"
+          className="border-[1px] border-green-200/30 rounded-md px-4 py-1 w-[350px] h-52"
           type="text"
           placeholder="Definition"
         />
-        <input
+        <textarea
           onChange={(e) => setBook(e.target.value)}
           value={book}
-          className="border-[1px] border-green-200/30 rounded-md px-4 py-1 w-[290px]"
+          className="border-[1px] border-green-200/30 rounded-md px-4 py-1 w-[350px] h-20"
           type="text"
           placeholder="Book"
         />
-        <input
+        <textarea
           onChange={(e) => setChapter(e.target.value)}
           value={chapter}
-          className="border-[1px] border-green-200/30 rounded-md px-4 py-1 w-[290px]"
+          className="border-[1px] border-green-200/30 rounded-md px-4 py-1 w-[350px] h-20"
           type="text"
           placeholder="Chapter"
         />
@@ -81,7 +81,7 @@ const AddTerm = () => {
         {/* Submit button */}
         <button
           type="submit"
-          className="bg-blue-700 py-3 px-6 w-[290px] rounded-md"
+          className="bg-blue-700 py-3 px-6 w-[350px] rounded-md"
         >
           Add
         </button>
