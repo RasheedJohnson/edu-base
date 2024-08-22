@@ -16,7 +16,7 @@ const EditTermForm = ({ id, term, definition, book, chapter }) => {
     e.preventDefault();
 
     try {
-      const res = await fetch(`http://localhost:3000/api/terms/${id}`, {
+      const res = await fetch(`/api/terms/${id}`, {
         method: "PUT",
         headers: {
           "Content-type": "application/json",

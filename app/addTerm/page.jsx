@@ -24,7 +24,7 @@ const AddTerm = () => {
     }
 
     try {
-      const res = await fetch("http://localhost:3000/api/terms", {
+      const res = await fetch("/api/terms", {
         method: "POST",
         headers: {
           "Content-type": "application/json",

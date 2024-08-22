@@ -4,8 +4,10 @@ import { FaPencilAlt } from "react-icons/fa";
 
 // Get topics to display
 const getAllTerms = async () => {
+  const apiUrl = process.env.API_URL;
+
   try {
-    const res = await fetch("http://localhost:3000/api/terms", {
+    const res = await fetch(`${apiUrl}/api/terms`, {
       cache: "no-store",
     });
 

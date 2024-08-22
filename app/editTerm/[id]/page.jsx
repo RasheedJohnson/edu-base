@@ -1,8 +1,10 @@
 import EditTermForm from "@/components/EditTermForm";
 
 const getTermById = async (id) => {
+  const apiUrl = process.env.API_URL;
+
   try {
-    const res = await fetch(`http://localhost:3000/api/terms/${id}`, {
+    const res = await fetch(`${apiUrl}/api/terms/${id}`, {
       cache: "no-store",
     });
 
@@ -26,13 +28,15 @@ const EditTerm = async ({ params }) => {
   const { term, definition, book, chapter } = item.foundTerm;
 
   return (
-    <EditTermForm
-      id={id}
-      term={term}
-      definition={definition}
-      book={book}
-      chapter={chapter}
-    />
+    <>
+      <EditTermForm
+        id={id}
+        term={term}
+        definition={definition}
+        book={book}
+        chapter={chapter}
+      />
+    </>
   );
 };
 
