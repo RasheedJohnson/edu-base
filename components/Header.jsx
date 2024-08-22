@@ -22,7 +22,7 @@ const navItems = [
 
 const Header = () => {
   return (
-    <>
+    <div>
       <SideBar>
         {navItems.map((item, index) => {
           return (
@@ -32,7 +32,7 @@ const Header = () => {
           );
         })}
       </SideBar>
-    </>
+    </div>
   );
 };
 

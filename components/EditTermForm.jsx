@@ -44,28 +44,28 @@ const EditTermForm = ({ id, term, definition, book, chapter }) => {
         <input
           onChange={(e) => setNewTerm(e.target.value)}
           value={newTerm}
-          className="border-[1px] border-green-200/30 rounded-md px-4 py-1 w-[350px]"
+          className="border-[1px] border-green-200/30 rounded-md px-4 py-1 w-[350px] lg:w-[500px]"
           type="text"
           placeholder="Term"
         />
         <textarea
           onChange={(e) => setNewDefinition(e.target.value)}
           value={newDefinition}
-          className="border-[1px] border-green-200/30 rounded-md px-4 py-1 w-[350px] h-52"
+          className="border-[1px] border-green-200/30 rounded-md px-4 py-1 w-[350px] lg:w-[500px] h-52"
           type="text"
           placeholder="Definition"
         />
         <textarea
           onChange={(e) => setNewBook(e.target.value)}
           value={newBook}
-          className="border-[1px] border-green-200/30 rounded-md px-4 py-1 w-[350px] h-20"
+          className="border-[1px] border-green-200/30 rounded-md px-4 py-1 w-[350px] lg:w-[500px] h-20"
           type="text"
           placeholder="Book"
         />
         <textarea
           onChange={(e) => setNewChapter(e.target.value)}
           value={newChapter}
-          className="border-[1px] border-green-200/30 rounded-md px-4 py-1 w-[350px] h-20"
+          className="border-[1px] border-green-200/30 rounded-md px-4 py-1 w-[350px] lg:w-[500px] h-20"
           type="text"
           placeholder="Chapter"
         />
@@ -73,7 +73,7 @@ const EditTermForm = ({ id, term, definition, book, chapter }) => {
         {/* Submit button */}
         <button
           type="submit"
-          className="bg-blue-700 py-3 px-6 w-[350px] rounded-md"
+          className="bg-blue-700 py-3 px-6 w-[350px] lg:w-[500px] rounded-md"
         >
           Update
         </button>

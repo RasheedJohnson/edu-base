@@ -1,6 +1,7 @@
 import Link from "next/link";
 import RemoveBtn from "./RemoveBtn";
 import { FaPencilAlt } from "react-icons/fa";
+import "dotenv/config";
 
 // Get topics to display
 const getAllTerms = async () => {

@@ -52,28 +52,28 @@ const AddTerm = () => {
         <input
           onChange={(e) => setTerm(e.target.value)}
           value={term}
-          className="border-[1px] border-green-200/30 rounded-md px-4 py-1 w-[350px]"
+          className="border-[1px] border-green-200/30 rounded-md px-4 py-1 w-[350px] lg:w-[500px]"
           type="text"
           placeholder="Term"
         />
         <textarea
           onChange={(e) => setDefinition(e.target.value)}
           value={definition}
-          className="border-[1px] border-green-200/30 rounded-md px-4 py-1 w-[350px] h-52"
+          className="border-[1px] border-green-200/30 rounded-md px-4 py-1 w-[350px] lg:w-[500px] h-52"
           type="text"
           placeholder="Definition"
         />
         <textarea
           onChange={(e) => setBook(e.target.value)}
           value={book}
-          className="border-[1px] border-green-200/30 rounded-md px-4 py-1 w-[350px] h-20"
+          className="border-[1px] border-green-200/30 rounded-md px-4 py-1 w-[350px] lg:w-[500px] h-20"
           type="text"
           placeholder="Book"
         />
         <textarea
           onChange={(e) => setChapter(e.target.value)}
           value={chapter}
-          className="border-[1px] border-green-200/30 rounded-md px-4 py-1 w-[350px] h-20"
+          className="border-[1px] border-green-200/30 rounded-md px-4 py-1 w-[350px] lg:w-[500px] h-20"
           type="text"
           placeholder="Chapter"
         />
@@ -81,7 +81,7 @@ const AddTerm = () => {
         {/* Submit button */}
         <button
           type="submit"
-          className="bg-blue-700 py-3 px-6 w-[350px] rounded-md"
+          className="bg-blue-700 py-3 px-6 w-[350px] lg:w-[500px] rounded-md"
         >
           Add
         </button>

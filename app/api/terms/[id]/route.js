@@ -72,10 +72,7 @@ export async function GET(request, { params }) {
     }
 
     // Return success response
-    return NextResponse.json(
-      { message: "Term found", foundTerm },
-      { status: 200 }
-    );
+    return NextResponse.json({ foundTerm }, { status: 200 });
   } catch (error) {
     return NextResponse.json(
       { message: `Internal Server Error - ${error.message}` },
