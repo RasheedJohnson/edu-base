@@ -23,9 +23,9 @@ const EditTerm = async ({ params }) => {
   console.log;
 
   // Item returns object in form of {message: "...", foundTerm: "..."}
-  const item = await getTermById(id);
+  const termToEdit = await getTermById(id);
 
-  const { term, definition, book, chapter } = item.foundTerm;
+  const { term, definition, book, chapter } = termToEdit.foundTerm;
 
   return (
     <>
