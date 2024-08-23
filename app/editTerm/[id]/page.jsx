@@ -21,8 +21,6 @@ const getTermById = async (id) => {
 const EditTerm = async ({ params }) => {
   const { id } = params;
   const { foundTerm } = await getTermById(id);
-  console.log(foundTerm);
-
   const { term, definition, book, chapter } = foundTerm;
 
   return (
