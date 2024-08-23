@@ -42,12 +42,6 @@ const TermsList = async () => {
                 {item.definition}
               </p>
             </div>
-
-            {/* Book and Chapter */}
-            {/* <div className="text-xs text-gray-200/50 font-extralight">
-              <p>{item.book}</p>
-              <p>{item.chapter}</p>
-            </div> */}
           </div>
 
           {/* Buttons */}
